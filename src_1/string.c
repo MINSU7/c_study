@@ -2,10 +2,10 @@ char* strstr(char *str1,char *str2){
     int len_str2 = 0;
     for(len_str2 = 0; str2[len_str2] != '\0';len_str2++){
     }
-    for(int i = 0 ; str1[i] != '\0';i++){
-        if(len_str2 == 0){
+    if(len_str2 == 0){
             return str1;
         }
+    for(int i = 0 ; str1[i] != '\0';i++){
         int check = 1;
         for(int j = 0; str2[j] != '\0';j++){
             if(str2[j] != str1[i + j])check = 0;
@@ -18,8 +18,8 @@ char* strstr(char *str1,char *str2){
 }
 
 
-long unsigned int strlen(char *str1){
-    int len = 0;
+unsigned int strlen(char *str1){
+    unsigned int len = 0;
     for(len = 0 ;str1[len] != '\0';len++){  
     }
     return len;
@@ -40,7 +40,7 @@ char *strcat(char *str1,char *str2){
     *(str3 + len_str1 + len_str2) = '\0';
     return str3;
 }
-
+                
 char *strcpy(char *str1,char *str2){
     int i = 0;
     for(i = 0 ; str2[i] != '\0';i++){
